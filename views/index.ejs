@@ -11,17 +11,11 @@
 </head>
 
 <body>
-  <h1>
-    <%= title %>
-  </h1>
-  <p>Welcome to <%= title %>
-  </p>
-
   <% pictures.forEach(function(picture){ %>
     <div class="text-center">
-      <img class="mb-3" src="/<%=picture%>" /<%=picture%>" style="width:100%">
+      <img class="mb-3" src="data:image/png; base64, <%=picture.src%>" style="width:200px">
       <h4>
-        <%=picture%>
+        <%=picture.name%>
       </h4>
     </div>
     <% });%>
